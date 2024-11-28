@@ -26,6 +26,15 @@ steps
 echo 'Deploying....'
 // Here you can define commands for your deployment
 }
+  post
+  {
+    always{
+      echo 'Post build condition running'
+    }
+    failure{
+      echo 'Post action if build failed'
+    }
+  }
 }
 }
 }
